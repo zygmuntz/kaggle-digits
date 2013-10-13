@@ -5,6 +5,6 @@ Paul Mineiro published some [kernel approximation code, dubbed _cosplay_](http:/
 
 As mentioned in the article, you'll need [Maxent and L-BFGS](http://www.cs.grinnell.edu/~weinman/code/) for the logistic regression part.
 
-Accuracy on Digits is similar to accuracy on MNIST: around 97,7%.
+Accuracy on Digits is similar to accuracy on MNIST: around 97.7%.
 	
 	

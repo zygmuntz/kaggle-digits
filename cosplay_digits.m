@@ -95,6 +95,8 @@ fprintf('finished: ');
 toc
 fprintf('train accuracy is %g\n',accuracy(C1,trainy,trainx));
 
+% save predictions
+
 P = map(C1,testx);
 P = P - 1;
 ids = 1:28000;

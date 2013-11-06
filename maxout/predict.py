@@ -6,7 +6,7 @@ import sys
 import os
 from pylearn2.utils import serial
 from pylearn2.config import yaml_parse
-from csv_dataset import CSVDataset
+from digits_dataset import DigitsDataset
 
 try:
 	model_path = sys.argv[1]

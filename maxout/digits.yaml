@@ -40,7 +40,7 @@
                 'valid' : !obj:csv_dataset.CSVDataset {
                     path: '/path/to/test_v.csv',
                     one_hot: 1,
-                    with_headers: 0
+                    expect_headers: 0
                 }
         },        
 

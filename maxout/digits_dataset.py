@@ -15,16 +15,14 @@ class DigitsDataset( DenseDesignMatrix ):
 	def __init__(self, 
 			path = 'train.csv',
 			one_hot = False,
-			labels = True,
-			headers = True):
+			expect_labels = True,
+			expect_headers = True):
 
 		self.path = path
 		self.one_hot = one_hot
-		# re-map those
-		self.expect_labels = labels
-		self.expect_headers = headers
+		self.expect_labels = expect_labels
+		self.expect_headers = expect_headers
 		
-		self.no_classes = 10
 		self.view_converter = None
 
 		# and go
@@ -47,13 +45,18 @@ class DigitsDataset( DenseDesignMatrix ):
 		if self.expect_labels:
 			y = data[:,0]
 			X = data[:,1:]
+			
+			# get unique labels and map them to one-hot positions
+			labels = np.unique(y)
+			labels = { x: i for i, x in enumerate( labels ) }
 
 			if self.one_hot:
-				one_hot = np.zeros(( y.shape[0], self.no_classes ), dtype='float32' )
+				one_hot = np.zeros(( y.shape[0], len( labels )), dtype='float32' )
 				for i in xrange( y.shape[0] ):
-					one_hot[i,y[i]] = 1.
+					label = y[i]
+					label_position = labels[label]
+					one_hot[i,label_position] = 1.
 				y = one_hot
-
 		else:
 			X = data
 			y = None

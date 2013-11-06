@@ -1,5 +1,5 @@
 !obj:pylearn2.train.Train {
-    dataset: &train !obj:csv_dataset.CSVDataset {
+    dataset: &train !obj:digits_dataset.DigitsDataset {
         path: '/path/to/train_v.csv',
         one_hot: 1
     },
@@ -37,7 +37,7 @@
         monitoring_dataset:
         {
                 'train' : *train,
-                'valid' : !obj:csv_dataset.CSVDataset {
+                'valid' : !obj:digits_dataset.DigitsDataset {
                     path: '/path/to/test_v.csv',
                     one_hot: 1,
                     expect_headers: 0

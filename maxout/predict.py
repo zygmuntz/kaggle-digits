@@ -27,7 +27,7 @@ except Exception, e:
 #dataset = dataset.get_test_set()
 
 # or maybe specify test in yaml
-dataset = DigitsDataset( path = test_path, one_hot = True, labels = False, headers = True )
+dataset = DigitsDataset( path = test_path, one_hot = True, expect_labels = False, expect_headers = True )
 
 # use smallish batches to avoid running out of memory
 batch_size = 100

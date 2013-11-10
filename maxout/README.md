@@ -5,6 +5,7 @@ See [http://fastml.com/maxing-out-the-digits/](http://fastml.com/maxing-out-the-
 	
 	csv_dataset - a general dataset wrapper, not needed to run the digits example
 	digits.yaml - a config file, set your data paths here
+	digits_hardcore.yaml - train longer, get better score
 	digits_dataset.py - a wrapper class for the digits in CSV format. You need it in your PYTHONPATH.
 	predict.py - get predictions from a model
 	

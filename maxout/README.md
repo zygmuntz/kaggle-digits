@@ -33,4 +33,4 @@ Or, for the two-stage:
 	...
 	train.py digits.yaml
 	train.py digits_continued.yaml
-	predict.py digits_continued_best.pkl test.csv predictions_continued.csv
+	predict.py digits_continued.pkl test.csv predictions_continued.csv
